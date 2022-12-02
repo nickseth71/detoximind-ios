@@ -1,0 +1,15 @@
+<ion-header class="header">
+  <ion-toolbar class="ion-safe-area-wrapper">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="post_data_all">{{post_data_all.title.rendered}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img *ngIf="post_data_all && post_data_all.categories[0] == 41" src="../../assets/audio-img.png" alt="">
+  <ion-text *ngIf="post_data_all">
+    <p [innerHTML]="post_data_all.content.rendered"></p>
+  </ion-text>
+</ion-content>

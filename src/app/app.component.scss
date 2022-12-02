@@ -1,0 +1,87 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    --background: #0F1B41;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Abril Fatface' !important;
+}
+
+::ng-deep input:-webkit-autofill,
+
+::ng-deep input:-webkit-autofill:hover,
+
+::ng-deep input:-webkit-autofill:focus,
+
+::ng-deep input:-webkit-autofill,
+
+::ng-deep textarea:-webkit-autofill,
+
+::ng-deep textarea:-webkit-autofill:hover::ng-deep textarea:-webkit-autofill:focus,
+
+::ng-deep select:-webkit-autofill,
+
+::ng-deep select:-webkit-autofill:hover,
+
+::ng-deep select:-webkit-autofill:focus {
+
+    border: none !important;
+
+    -webkit-text-fill-color: #fff !important;
+
+    /* -webkit-box-shadow: 0 0 0px 1000px #FFFFFF inset; */
+
+    transition: background-color 5000s ease-in-out 0s;
+
+}
+
+::ng-deep ion-header ion-title,
+::ng-deep ion-card-title {
+    font-family: 'Abril Fatface' !important;
+}
+
+::ng-deep ion-card-title {
+    font-weight: 400;
+}
+
+::ng-deep .loading-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+::ng-deep .loading-img {
+    max-width: 80px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+::ng-deep .loading-content {
+    margin-inline-start: 0 !important;
+}
+
+::ng-deep ion-spinner {
+    color: #fff !important;
+}
+
+::ng-deep ion-loading {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+::ng-deep .loading-wrapper {
+    background: transparent !important;
+    padding: 40px !important;
+    max-width: 250px !important;
+    width: 100% !important;
+}
+::ng-deep ios .ion-safe-area-wrapper {
+    padding-top: 50px;
+}

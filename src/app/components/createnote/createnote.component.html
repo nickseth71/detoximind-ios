@@ -1,0 +1,34 @@
+<ion-header class="header create-wrap">
+  <ion-toolbar class="ion-safe-area-wrapper">
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModel()">Close</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" *ngIf="!type" (click)="deleteNotes(id)">
+      <ion-icon name="trash-outline"></ion-icon>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+<div class="ionic_editor_wrapper">
+  <div class="ionic_editor_header">
+    <img src="../../../assets/pic-header.png" alt="">
+  </div>
+  <div class="ionic_editor">
+    <div class="ionic-editor_content">
+      <div>
+        <input type="text" placeholder="Please Enter Title" [(ngModel)]="title" />
+      </div>
+      <div>
+        <textarea placeholder="Please Enter Description" rows="10" [(ngModel)]="content"></textarea>
+      </div>
+      <div class="button-padding">
+        <div class="button-add" (click)="addNewNotes()" *ngIf="type else editbtn">Add</div>
+        <ng-template #editbtn>
+          <div class="button-add" (click)="editNotes(id)">Update</div>
+        </ng-template>
+      </div>
+    </div>
+
+  </div>
+  <div class="ionic-editor-footer"></div>
+</div>

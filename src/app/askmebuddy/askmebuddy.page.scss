@@ -1,0 +1,122 @@
+ion-toolbar {
+    --background: #0F1B41;
+    --color: #FFFAEA;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    padding: 10px !important;
+
+    ion-back-button {
+        color: #fff;
+    }
+}
+
+ion-footer {
+    --background: #0F1B41;
+    --color: #FFFAEA;
+}
+
+ion-item {
+    --background: #0F1B41;
+    --color: #FFFAEA;
+    margin-top: 12px;
+}
+
+.text-feedback {
+    padding: 20px;
+    background: #0F1B41;
+    color: #fff;
+    // height: calc(100% - (200px + 30px));
+    overflow-y: scroll;
+}
+
+.text-feedback_wrap {
+    border-bottom: 1px solid #ccc;
+}
+
+ion-button[ng-reflect-type="submit"] {
+    --background: #0F1B41;
+    margin: 0;
+    --ion-color-base: #0F1B41 !important;
+    --ion-color-shade: #0F1B41 !important;
+    --ion-color-tint: #0F1B41 !important;
+}
+
+form {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #0F1B41;
+    padding: 20px;
+
+    ion-row {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    ion-input {
+        border: 1px solid #fff;
+        --color: #fff !important;
+        --font-size: 14px;
+        --padding-start: 10px !important;
+    }
+
+    ion-button {
+        --background: #fff !important;
+        color: #000;
+        max-width: 157px;
+        margin: 15px auto;
+        --border-radius: 5px;
+        --padding: 20px;
+        --cursor: pointer;
+    }
+
+    :host(.item-fill-none.item-interactive.ion-focus) .item-native,
+    :host(.item-fill-none.item-interactive.item-has-focus) .item-native,
+    :host(.item-fill-none.item-interactive.ion-touched.ion-invalid) .item-native {
+        border-bottom: unset;
+    }
+
+    ion-label {
+        text-transform: uppercase;
+        padding-right: 10px;
+        color: #fff;
+    }
+}
+
+ion-content {
+    --background: #0C1A40;
+    .text-feedback p {
+        text-transform: capitalize;
+
+        strong {
+            padding-right: 10px;
+            text-transform: uppercase;
+        }
+    }
+
+    ion-title {
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+}
+
+::ng-deep item-inner {
+    border-bottom-color: transparent !important;
+    box-shadow: none !important;
+}
+
+::ng-deep ion-tab-bar {
+    --background: #fff;
+
+    ion-tab-button {
+        --color: #0C1A40;
+    }
+
+    ion-tab-button.tab-selected {
+        color: #009688;
+    }
+}
+
+::ng-deep .ask_title {
+    text-transform: uppercase;
+}

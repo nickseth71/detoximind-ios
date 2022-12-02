@@ -1,0 +1,138 @@
+ion-header {
+  ion-toolbar {
+      --background: #0F1B41;
+      color: #FFFAEA;
+      box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+      padding: 10px;
+      position: relative;
+  }
+
+  ion-back-button {
+      color: #fff;
+  }
+
+  ion-title {
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+  }
+  ion-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 34px;
+}
+.home_header{
+  max-width: 115px;
+    margin: auto;
+    width: 100%;
+}
+  
+}
+ion-content {
+  --background: url('../../assets/banner.jpeg');
+  --color: #fff;
+
+  .upper_Section {
+    display: flex;
+    background: #0F1B41;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    ion-icon {
+      position: absolute;
+      right: 14px;
+      font-size: 30px;
+    }
+
+    img {
+      max-width: 120px;
+      width: 100%;
+    }
+  }
+
+  .bottom_section {
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 10px;
+
+    ion-col {
+      height: 200px;
+      padding: 0;
+
+      ion-img {
+        height: 200px;
+        object-fit: cover;
+      }
+    }
+
+    ion-card {
+      margin: 0;
+      background: transparent;
+      position: relative;
+
+      h1 {
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        text-transform: uppercase;
+        position: absolute;
+        letter-spacing: 1px;
+        font-family: "Abril Fatface", cursive;
+        top: 45%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 120px;
+        vertical-align: middle;
+      }
+
+      ion-img {
+        border-radius: 20px;
+        overflow: hidden;
+        border: 1px solid #fff;
+        opacity: 0.5;
+        cursor: pointer;
+      }
+    }
+  }
+
+}
+
+
+form,
+input,
+optgroup,
+select {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  text-align: center;
+}
+
+::ng-deep .custom-alert {
+  .alert-wrapper {
+    padding: 20px;
+  }
+
+  .alert-head {
+    padding: 0;
+    text-transform: uppercase;
+  }
+
+  .alert-input-group {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.upper_Section {
+  z-index: 9999;
+}

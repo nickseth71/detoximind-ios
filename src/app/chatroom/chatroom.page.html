@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar class="ion-safe-area-wrapper">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>chatroom</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list *ngIf="group_data != undefined && group_data.length > 0">
+    <div *ngFor="let item of group_data">
+      <ion-item lines="full" button detail *ngIf="item.data.group_status==='true'" (click)="presentAlert(item)">
+        <ion-avatar slot="start">
+          <img alt="Silhouette of a person's head" src="../../assets/persons.webp" />
+        </ion-avatar>
+        <ion-label>
+          <h3>{{item.data.group_label}}</h3>
+          <p><small>{{item.data.created.toDate() | date }}</small></p>
+        </ion-label>
+      </ion-item>
+    </div>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,83 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+ion-spinner {
+    transform: scale(3);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Abril Fatface' !important;
+}
+
+// ::ng-deep ion-toolbar {
+//     height: 76px;
+// }
+
+// ion-header {
+//     position: fixed;
+//     height: 100px;
+// }
+// ios ion-header ion-toolbar {
+//     padding: 40px 10px !important;
+// }
+
+.header {
+    // box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%);
+    // z-index: 1;
+    // padding: 10px;
+    // background: #0F1B41;
+
+    .ion-safe-area-wrapper {
+        display: flex;
+        align-items: center;
+        color: #fff;
+    }
+
+    ion-title {
+        font-size: 20px;
+        // max-width: 320px;
+        max-width: 100%;
+        margin: auto;
+        text-transform: uppercase;
+        font-family: "Abril Fatface" !important;
+    }
+
+    ion-icon {
+        font-size: 20px;
+    }
+}
+
+ion-toolbar {
+    --padding-top: var(--ion-safe-area-top);
+  }

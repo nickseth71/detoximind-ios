@@ -1,0 +1,43 @@
+<ion-header class="header">
+  <ion-toolbar class="ion-safe-area-wrapper">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>WorkShops</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <div *ngIf="blocklength != 0 else blogtitile">
+      <!-- <img src="../../assets/workshop.svg" alt=""> -->
+      <!-- [routerLink]="['/post', post.id]" -->
+      <ion-card *ngFor="let post of posts" class="post-card">
+        <ion-card-header>
+          <ion-card-title [innerHTML]="post.title.rendered"></ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <!-- <p [innerHTML]="post.excerpt.rendered"></p> -->
+          <div [innerHTML]="post.content.rendered"></div>
+        </ion-card-content>
+        <!-- detail -->
+        <ion-item class="ion-activated" lines="none">
+          <!-- <ion-label *ngIf="!post.modified">{{post.date | date}}</ion-label>
+          <ion-label *ngIf="post.modified">{{post.modified | date}}</ion-label>
+          <ion-label class="read-more-label">Read More</ion-label> -->
+          <!-- <ion-icon name="chevron-forward-outline"></ion-icon> -->
+        </ion-item>
+      </ion-card>
+    </div>
+    <ng-template #blogtitile>
+      <div class="coming-soon_wrap">
+        <h1>Coming Soon</h1>
+      </div>
+    </ng-template>
+    <ion-infinite-scroll (ionInfinite)="loadData($event)">
+      <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more posts ...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </div>
+  <app-loader *ngIf="loader"></app-loader>
+</ion-content>

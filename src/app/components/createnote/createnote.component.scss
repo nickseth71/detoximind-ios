@@ -1,0 +1,129 @@
+input:focus {
+    outline: 0;
+    border: none;
+    box-shadow: none;
+}
+
+textarea:focus {
+    outline: 0;
+    border: none;
+    box-shadow: none;
+}
+
+ion-header {
+    background: #0F1B41;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+
+    ion-back-button {
+        --color: #fff;
+    }
+
+    ion-button {
+        --color: #fff;
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+
+    ion-title {
+        color: #fff;
+        font-size: 25px;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: "Roboto", serif;
+        line-height: 2;
+    }
+
+    ion-toolbar {
+        --background: transparent;
+    }
+
+    ion-icon {
+        color: #FFF;
+        font-weight: 800;
+        font-size: 30px;
+        padding-right: 20px;
+    }
+}
+
+.ionic_editor_wrapper {
+    background-image: url("../../../assets/Purple(2).png");
+    background-repeat: no-repeat;
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+
+    .ionic_editor_header {
+        text-align: center;
+        position: relative;
+        padding-top: 10px;
+
+        &::after {
+            position: absolute;
+            content: url(../../../assets/purple-right.png);
+            top: -95px;
+            right: -11%;
+            overflow: hidden;
+            transform: scale(.5);
+        }
+    }
+
+    .ionic_editor {
+        position: relative;
+        top: 0;
+        background: #fff;
+        z-index: 9;
+        margin: 20px 0;
+
+        div {
+            text-align: center;
+        }
+
+        input,
+        textarea {
+            padding: 10px;
+            border-radius: 5px;
+            background: transparent;
+            border: 1px solid #000;
+            font-size: 14px;
+            color: #000;
+            font-weight: 500;
+            margin-top: 20px;
+            width: 90%;
+            border-radius: 5px;
+        }
+
+        .button-padding {
+            padding-bottom: 30px;
+        }
+
+        .button-add {
+            background: #111F48;
+            padding: 15px 10px;
+            border-radius: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 16px;
+            width: 100%;
+            max-width: 150px;
+            margin: 20px auto;
+            border-radius: 30px;
+        }
+    }
+
+    .ionic-editor-footer {
+        background: url('../../../assets/purple-bottom.png');
+        background-repeat: no-repeat;
+        background-repeat: no-repeat;
+        background-size: 150px;
+        height: 149px;
+        position: absolute;
+        bottom: 0;
+        width: 150px;
+        background-position: bottom left;
+    }
+}
+
+.create-wrap  ion-toolbar:first-of-type {
+    padding: 10px 0;
+}

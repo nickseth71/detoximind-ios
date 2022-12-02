@@ -1,0 +1,71 @@
+PODS:
+  - Capacitor (3.6.0):
+    - CapacitorCordova
+  - CapacitorApp (1.1.1):
+    - Capacitor
+  - CapacitorCordova (3.6.0)
+  - CapacitorHaptics (1.1.4):
+    - Capacitor
+  - CapacitorKeyboard (1.2.3):
+    - Capacitor
+  - CapacitorNetwork (1.0.7):
+    - Capacitor
+    - ReachabilitySwift (~> 5.0)
+  - CapacitorSplashScreen (1.2.2):
+    - Capacitor
+  - CapacitorStatusBar (1.0.8):
+    - Capacitor
+  - CapacitorStorage (1.2.5):
+    - Capacitor
+  - ReachabilitySwift (5.0.0)
+
+DEPENDENCIES:
+  - "Capacitor (from `../../node_modules/@capacitor/ios`)"
+  - "CapacitorApp (from `../../node_modules/@capacitor/app`)"
+  - "CapacitorCordova (from `../../node_modules/@capacitor/ios`)"
+  - "CapacitorHaptics (from `../../node_modules/@capacitor/haptics`)"
+  - "CapacitorKeyboard (from `../../node_modules/@capacitor/keyboard`)"
+  - "CapacitorNetwork (from `../../node_modules/@capacitor/network`)"
+  - "CapacitorSplashScreen (from `../../node_modules/@capacitor/splash-screen`)"
+  - "CapacitorStatusBar (from `../../node_modules/@capacitor/status-bar`)"
+  - "CapacitorStorage (from `../../node_modules/@capacitor/storage`)"
+
+SPEC REPOS:
+  trunk:
+    - ReachabilitySwift
+
+EXTERNAL SOURCES:
+  Capacitor:
+    :path: "../../node_modules/@capacitor/ios"
+  CapacitorApp:
+    :path: "../../node_modules/@capacitor/app"
+  CapacitorCordova:
+    :path: "../../node_modules/@capacitor/ios"
+  CapacitorHaptics:
+    :path: "../../node_modules/@capacitor/haptics"
+  CapacitorKeyboard:
+    :path: "../../node_modules/@capacitor/keyboard"
+  CapacitorNetwork:
+    :path: "../../node_modules/@capacitor/network"
+  CapacitorSplashScreen:
+    :path: "../../node_modules/@capacitor/splash-screen"
+  CapacitorStatusBar:
+    :path: "../../node_modules/@capacitor/status-bar"
+  CapacitorStorage:
+    :path: "../../node_modules/@capacitor/storage"
+
+SPEC CHECKSUMS:
+  Capacitor: 838de9244464702bc67e3d47e81c471b79500059
+  CapacitorApp: 6539a37b671391147dd0180e1483c051077254bf
+  CapacitorCordova: d4a821a58b9b14452b05c583b0e52379e45810e5
+  CapacitorHaptics: cbf7ea645db90c005c96bedd0034aa7a447fe5cc
+  CapacitorKeyboard: 353a520309166f6cc26b3aa154a6c46c289aa40e
+  CapacitorNetwork: 185fc56570cfd4e3d41119d3ccd2a3ab3bd07806
+  CapacitorSplashScreen: 466ab02fdfcfc0efdb6167631386289e82efe2c6
+  CapacitorStatusBar: 2f4da63c505cfdecdbff4d4345dac24c11e7f699
+  CapacitorStorage: 63255170c2f7e9f7363b3e5e015584e6d18f2969
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+
+PODFILE CHECKSUM: 710edcc9d6d81527a5b94fef67bae2826824013b
+
+COCOAPODS: 1.11.2

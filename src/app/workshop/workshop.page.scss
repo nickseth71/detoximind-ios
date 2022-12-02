@@ -1,0 +1,104 @@
+ion-header {
+    ion-toolbar {
+        --background: #0F1B41;
+        --color: #FFFAEA;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+        padding: 10px;
+    }
+
+    ion-back-button {
+        color: #fff;
+    }
+
+    ion-title {
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+}
+
+.ion-activated {
+    --background: #0F1B41;
+    --color: #FFFAEA;
+}
+
+.all_category_div_wrapper {
+    display: flex;
+    padding: 4px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    div {
+        background: #074468;
+        width: auto;
+        margin: 4px 4px 10px;
+        padding: 10px;
+        border-radius: 9px;
+    }
+}
+
+.active {
+    background: #7f9395 !important;
+}
+
+ion-card {
+    --background: #fff;
+
+    ion-card-title {
+        font-weight: 300;
+        color: #000;
+        font-size: 20px;
+    }
+}
+
+ion-content {
+    --background: #0C1A40;
+
+    img {
+        max-width: 200px;
+        margin: 30px auto;
+        display: block;
+        filter: brightness(8.5);
+    }
+
+    p {
+        color: #000;
+    }
+}
+
+::ng-deep ion-card ion-icon {
+    color: #fff;
+}
+
+::ng-deep ion-tab-bar {
+    --background: #fff;
+
+    ion-tab-button {
+        --color: #0C1A40;
+    }
+
+    ion-tab-button.tab-selected {
+        color: #009688;
+    }
+}
+
+.coming-soon_wrap {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    h1 {
+        text-align: center;
+        color: #fff;
+    }
+}
+
+::ng-deep .wp-video-shortcode {
+    max-width: 370px;
+    width: 100%;
+    margin: auto;
+    height: auto;
+}

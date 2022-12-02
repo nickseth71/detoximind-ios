@@ -1,0 +1,47 @@
+<ion-header class="header" *ngIf="openDraw === false && openNote === false && openDrawViewer === false">
+  <ion-toolbar class="ion-safe-area-wrapper">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Journal</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content *ngIf="openDraw === false && openNote === false && openDrawViewer === false" [fullscreen]="true">
+  <ion-list *ngIf="data != undefined && data.length > 0">
+    <ion-item *ngFor="let item of data"
+      (click)="item.image_url == ''&& item.content !=''?openNotes(item):openDrawPanal(item)">
+      <ion-avatar slot="start">
+        <ion-icon name="book"></ion-icon>
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ item.title }}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed" edge>
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button class="edit-draw">
+        <ion-icon name="eyedrop-outline" (click)="openFab('draw')"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="top">
+      <ion-fab-button class="edit-draw">
+        <ion-icon name="book-outline" (click)="openFab('note')"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+
+  </ion-fab>
+</ion-content>
+<ion-content *ngIf="openDraw === true && openNote === false && openDrawViewer === false" scrollY="false">
+  <app-canvaspage (changeCompoents)="changeNotes($event)"></app-canvaspage>
+</ion-content>
+
+<ion-content *ngIf="openDraw === false && openNote === true" scrollY="false">
+  <app-createnote [item]="selected_data" (changeCompoents)="changeNotes($event)"></app-createnote>
+</ion-content>
+<ion-content *ngIf="openDraw === false && openNote === false && openDrawViewer === true" scrollY="false">
+  <app-imageviewer [item]="selected_data" (changeCompoents)="changeNotes($event)"></app-imageviewer>
+</ion-content>

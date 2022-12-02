@@ -1,0 +1,18 @@
+{
+  "name": "detoximind_updated",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "server": {
+    "url": "http://localhost:8100",
+    "cleartext": true
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0,
+      "launchAutoHide": true,
+      "layoutName": "launch_screen"
+    }
+  }
+}

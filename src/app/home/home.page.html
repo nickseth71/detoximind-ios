@@ -1,0 +1,31 @@
+<ion-header class="upper_Section" >
+    <ion-toolbar> 
+<div class="home_header">
+    <img src="../../assets/Logo.jpg" alt="logo">
+</div>
+<ion-icon name="person-circle-outline" [routerLink]="['/profile']" *ngIf="token != null"></ion-icon>
+    </ion-toolbar>
+    <!-- <ion-icon name="person" ></ion-icon> -->
+</ion-header>
+<ion-content>
+    <div class="bottom_section">
+        <ion-row>
+            <ion-col size="6" class="bottom_section_row" *ngFor="let item of All_items">
+                <ion-card *ngIf="item.type=='link' else other_card" class="card-img-wrap">
+                    <a href="http://www.detoximind.com/">
+                        <div class="bottom_img_wrap">
+                            <ion-img class="image_icon" src="{{item.img}}"></ion-img>
+                        </div>
+                    </a>
+                    <h1>{{item.title}}</h1>
+                </ion-card>
+                <ng-template #other_card>
+                    <ion-card (click)="openScreens(item.type)" class="card-img-wrap">
+                        <ion-img class="image_icon" src="{{item.img}}"></ion-img>
+                        <h1>{{item.title}}</h1>
+                    </ion-card>
+                </ng-template>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-content>

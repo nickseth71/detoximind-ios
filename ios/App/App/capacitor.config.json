@@ -1,0 +1,13 @@
+{
+	"appId": "io.acmeintech.detoximind",
+	"appName": "Detoximind",
+	"webDir": "www",
+	"bundledWebRuntime": false,
+	"plugins": {
+		"SplashScreen": {
+			"launchShowDuration": 0,
+			"launchAutoHide": true,
+			"layoutName": "launch_screen"
+		}
+	}
+}

@@ -1,0 +1,13 @@
+<ion-header class="header imgview-wrap">
+  <ion-toolbar class="ion-safe-area-wrapper">
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModel()">Close</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" *ngIf="!type" (click)="deleteNotes(item.id)">
+      <ion-icon name="trash-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<div>
+  <ion-img [src]="item.image_url"></ion-img>
+</div>

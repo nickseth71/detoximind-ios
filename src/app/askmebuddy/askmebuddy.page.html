@@ -1,0 +1,44 @@
+<ion-header class="header">
+  <ion-toolbar class="ion-safe-area-wrapper">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ask_title">Ask Me Buddy</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollEvents]="true" #content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="chevron-down-circle-outline" pullingText="Pull to refresh"
+      refreshingSpinner="circles" refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-text *ngIf="contactus_data">
+    <!-- <p [innerHTML]="contactus_data.content.rendered"></p> -->
+  </ion-text>
+  <div class="text-feedback" *ngIf="all_data_rec != undefined && all_data_rec.length > 0">
+    <div *ngFor="let item of all_data_rec" class="text-feedback_wrap">
+      <p><strong>Question:</strong>{{item.user_message}}</p>
+      <p><strong>Answer:</strong><span *ngIf="item.admin_message != null">{{item.admin_message}}</span></p>
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <form [formGroup]="ionicForm" (ngSubmit)="submitForm()">
+    <!-- <ion-label>Question:</ion-label> -->
+    <ion-row>
+      <ion-col size="8">
+        <ion-input placeholder="Enter Your Question" type="text" [(ngModel)]="questionMsg"
+          formControlName="questionInput" autofocus="true">
+        </ion-input>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button expand="block" type="submit" [disabled]="!ionicForm.valid">
+          <ion-icon name="send" slot="icon-only"></ion-icon>
+          <ion-spinner name="lines-small" *ngIf="loader"></ion-spinner>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-footer>

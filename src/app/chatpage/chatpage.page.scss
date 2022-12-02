@@ -1,0 +1,80 @@
+ion-header {
+    ion-toolbar {
+        --background: #0F1B41;
+        --color: #FFFAEA;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+        padding: 10px;
+    }
+    ion-back-button {
+        color: #fff;
+    }
+    ion-title {
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+}
+ion-content {
+    --background: #0F1B41;
+}
+ion-footer {
+    border-top: 1px solid #fff;
+    ion-toolbar {
+        --background: #0F1B41;
+    }
+    ion-icon {
+        color: #fff;
+    }
+    ion-row {
+        align-items: center;
+    }
+}
+::ng-deep .message {
+    padding: 10px 30px;
+    border-radius: 39px;
+    margin-bottom: 4px;
+    white-space: pre-wrap;
+    b {
+        text-transform: uppercase;
+    }
+    span {
+        text-transform: capitalize;
+    }
+}
+::ng-deep .my-message {
+    background: #009688;
+    color: #fff;
+    border-top-right-radius: 0.17rem;
+    margin: 10px;
+}
+::ng-deep .other-message {
+    background: #fff;
+    color: #000;
+    border-top-left-radius: 0.17rem;
+}
+::ng-deep .createdAt {
+    color: #000;
+    float: right;
+    font-size: small;
+    line-height: 10px;
+}
+::ng-deep .inputBox {
+    margin-top: 0px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    background: #fff;
+    color: #0F1B41;
+}
+::ng-deep .sendBtn {
+    --padding-start: 0.5em;
+    --padding-end: 0.5em;
+}
+::ng-deep textarea.native-textarea.sc-ion-textarea-ios {
+    padding-left: 15px;
+}
+::ng-deep .chat-wrapper {
+    --padding: 40px;
+}
+.active_select {
+    background-color: #486E6B;
+}

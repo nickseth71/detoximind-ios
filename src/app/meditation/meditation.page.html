@@ -1,0 +1,40 @@
+<ion-header class="header">
+  <ion-toolbar class="ion-safe-area-wrapper">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Meditation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="meditation-wrapper">
+  <div>
+    <!-- <ion-card > -->
+    <!-- <ion-card-header>
+        <ion-card-title [innerHTML]="post.title.rendered"></ion-card-title>
+      </ion-card-header> -->
+    <ion-card-content>
+
+      <!-- <p [innerHTML]="post.excerpt.rendered"></p> -->
+      <!-- <p [innerHTML]="post.title.rendered"></p> -->
+      <ion-item *ngFor="let post of posts" class="post-card" [routerLink]="['/post', post.id]">
+        <ion-avatar slot="start">
+          <img src='{{post.featured_image_src !=null?post.featured_image_src:"../../../../assets/audio-img.png"}}'>
+        </ion-avatar>
+        <ion-label [innerHTML]="post.title.rendered"></ion-label>
+      </ion-item>
+    </ion-card-content>
+    <!-- detail -->
+    <!-- <ion-item class="ion-activated" lines="none">
+        <ion-label *ngIf="!post.modified">{{post.date | date}}</ion-label>
+        <ion-label *ngIf="post.modified">{{post.modified | date}}</ion-label>
+        <ion-label class="read-more-label">Read More</ion-label>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-item> -->
+    <!-- </ion-card> -->
+    <ion-infinite-scroll (ionInfinite)="loadData($event)">
+      <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more posts ...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </div>
+</ion-content>

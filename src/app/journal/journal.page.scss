@@ -1,0 +1,89 @@
+.upload {
+    display: inline-block
+}
+
+ion-toolbar {
+    --background: #0F1B41;
+    --color: #FFFAEA;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    padding: 10px !important;
+
+    ion-back-button {
+        color: #fff;
+    }
+
+    ion-title {
+        color: #fff;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-family: "Roboto", serif;
+        line-height: 2;
+    }
+
+    ion-toolbar {
+        --background: transparent;
+    }
+}
+
+ion-content {
+    --background: #0F1B41;
+    --color: #fff;
+    ;
+
+    ion-list {
+        background: transparent;
+        margin: 20px 10px;
+
+        ion-item {
+            --background: transparent;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+
+
+
+            h2 {
+                font-size: 20px;
+                text-transform: uppercase;
+                font-family: "Roboto", serif;
+                margin: 0;
+            }
+        }
+    }
+
+    ion-label,
+    ion-avatar {
+        --color: #fff;
+    }
+
+    // ion-icon {
+    //     color: #fff;
+    // }
+}
+
+::ng-deep ion-content ion-avatar {
+    width: unset;
+    height: unset;
+}
+
+::ng-deep .item-inner {
+    border: none;
+}
+
+::ng-deep ion-fab {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+}
+
+ion-fab-button {
+    --background: #fff;
+    --color: #000;
+    font-weight: 900;
+}
+
+ion-avatar {
+    ion-icon {
+        color: #fff;
+    }
+}

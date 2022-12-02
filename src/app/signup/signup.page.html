@@ -1,0 +1,71 @@
+<ion-content>
+  <form (ngSubmit)="signup()" [formGroup]="credentials">
+    <img src="../../assets/Logo.jpg" alt="">
+    <h5 class="login-title">Sign Up</h5>
+    <div class="input-group">
+      <ion-item class="item-fill-none" lines="none">
+        <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+        <ion-icon name="mail"></ion-icon>
+      </ion-item>
+      <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
+        <span *ngIf="email.errors?.required">Email is required</span>
+        <span *ngIf="email.errors?.email">Email is invalid</span>
+      </div>
+    </div>
+    <!-- <div class="input-group">
+      <ion-item>
+        <ion-input type="test" placeholder="Mobile No." formControlName="mobile"></ion-input>
+      </ion-item>
+      <div *ngIf="(mobile.dirty || mobile.touched) && mobile.errors" class="errors">
+        <span *ngIf="mobile.errors?.required">Email is required</span>
+        <span *ngIf="mobile.errors?.email">mobile is invalid</span>
+      </div>
+    </div> -->
+    <div class="input-group">
+      <ion-item>
+        <ion-input type="text" placeholder="User Name" formControlName="username"></ion-input>
+        <ion-icon name="person"></ion-icon>
+      </ion-item>
+      <div *ngIf="(username.dirty || username.touched) && username.errors" class="errors">
+        <span *ngIf="username.errors?.required">User Name is required</span>
+        <span *ngIf="username.errors?.username">User Name is invalid</span>
+      </div>
+    </div>
+    <div class="input-group">
+      <ion-item>
+        <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+        <ion-icon name="lock-closed"></ion-icon>
+      </ion-item>
+      <div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
+        <span *ngIf="password.errors?.required">Password is required</span>
+        <span *ngIf="password.errors?.minlength">Password needs to be 6 characters</span>
+      </div>
+    </div>
+    <div class="input-group">
+      <ion-item>
+        <ion-input [type]="inputType" placeholder="Confirm Password" formControlName="confirm_password"></ion-input>
+        <ion-icon name="eye-outline" *ngIf="showPassword else eyeOff" (click)="showinputPassword()"></ion-icon>
+        <ng-template #eyeOff>
+          <ion-icon name="eye-off-outline" (click)="hidePassword()"></ion-icon>
+        </ng-template>
+      </ion-item>
+      <div *ngIf="(confirm_password.dirty || confirm_password.touched) && confirm_password.errors" class="errors">
+        <span *ngIf="confirm_password.errors?.required">Confirm Password is required</span>
+        <span *ngIf="confirm_password.errors?.mustMatch">Passwords must match</span>
+      </div>
+    </div>
+    <ion-button type="submit" expand="block" [disabled]="!credentials.valid">Sign Up</ion-button>
+    <ion-button type="button" expand="block" [routerLink]="['/login']" class="login_btn">Already a Member? Log
+      In
+    </ion-button>
+
+    <!-- <ion-button type="button" expand="block" color="tertiary">
+    <ion-icon name="logo-google" slot="start"></ion-icon>
+    Sign in with Google
+  </ion-button>
+  <ion-button type="button" expand="block" color="tertiary">
+    <ion-icon name="logo-apple" slot="start"></ion-icon>
+    Sign in with Apple
+  </ion-button> -->
+  </form>
+</ion-content>

@@ -1,0 +1,33 @@
+<svg id="wave1" viewBox="0 0 746 23">
+  <path id="curve" d="M.35,56.81c53.28,0,53.28,22,106.57,22s53.28-22,106.57-22,53.28,22,106.57,22,53.28-22,106.56-22,53.29,22,106.58,22,53.28-22,106.57-22,53.29,22,106.58,22" transform="translate(0 -56)" />
+  
+  <text x="50%" class="desktop" text-anchor="middle">
+    <textPath xlink:href="#curve">
+      centrum for nyskabelse
+    </textPath>
+  </text>
+  <text x="50%" class="desktop" text-anchor="middle" transform="translate(0, 25)">
+    <textPath xlink:href="#curve">
+      og kreativitet
+    </textPath>
+  </text>
+  
+  <text x="50%" class="mobile" text-anchor="middle">
+    <textPath xlink:href="#curve">
+      centrum
+    </textPath>
+  </text>
+  <text x="50%" class="mobile" text-anchor="middle" transform="translate(0, 20)">
+    <textPath xlink:href="#curve">
+       for nyskabelse
+    </textPath>
+  </text>
+  
+  <text x="50%" class="mobile" text-anchor="middle" transform="translate(0, 40)">
+    <textPath xlink:href="#curve">
+      og kreativitet
+    </textPath>
+  </text>
+  
+  
+</svg>

@@ -1,0 +1,314 @@
+canvas {
+    border: 1px solid rgb(187, 178, 178);
+}
+
+input:focus {
+    outline: 0;
+    border: none;
+    box-shadow: none;
+}
+
+textarea:focus {
+    outline: 0;
+    border: none;
+    box-shadow: none;
+}
+
+ion-header {
+    padding: 0;
+    --background: #0F1B41;
+    --position: fixed;
+
+    ion-icon {
+        color: #fff;
+        font-size: 25px;
+    }
+
+    ion-toolbar {
+        --background: #0F1B41;
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 999999;
+    }
+
+    ion-button.save-btn {
+        --background: #fff;
+        --border-radius: 20px;
+        font-weight: 800;
+        --color: #000;
+    }
+
+    img {
+        max-width: 120px;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+
+    ion-back-button {
+        --color: #fff;
+    }
+}
+
+.ionic_editor_wrapper {
+    background-color: #D2E4FC;
+    position: relative;
+    z-index: 9999;
+    left: 0;
+    // right: 0;
+    margin: 0 auto;
+    background: url('../../../assets/purple-right.png');
+    background-repeat: no-repeat;
+    background-size: 150px;
+    top: 0;
+    background-position: right;
+    width: 100%;
+    height: 150px;
+
+    .ionic_editor_header {
+        text-align: center;
+        position: relative;
+        padding: 20px;
+
+        &::before {
+            position: absolute;
+            content: url(../../../assets/hand.png);
+            top: 0;
+            left: -38px;
+            z-index: 1;
+            transform: scale(0.5);
+        }
+    }
+
+    .ionic_editor {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: url(../../../assets/song.png);
+            top: -17%;
+            right: -11%;
+            z-index: 1;
+            transform: scale(0.5);
+        }
+
+        &::before {
+            position: absolute;
+            content: url(../../../assets/dice.png);
+            bottom: -18%;
+            right: -16%;
+            z-index: 1;
+            transform: scale(.5);
+        }
+
+        div {
+            text-align: center;
+        }
+
+        input,
+        textarea {
+            padding: 10px;
+            border-radius: 5px;
+            background: #fff;
+            border: none;
+            font-size: 14px;
+            color: #000;
+            font-weight: 500;
+            margin-top: 20px;
+            width: 60%;
+            border-radius: 5px;
+        }
+
+        .button-padding {
+            padding-bottom: 20px;
+        }
+
+        .button-add {
+            background: #111F48;
+            padding: 15px 10px;
+            border-radius: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 16px;
+            width: 100%;
+            max-width: 150px;
+            margin: 20px auto;
+            border-radius: 30px;
+        }
+
+        canvas {
+            background: #fff;
+            background: #fff;
+        }
+    }
+
+    .ionic-editor-footer {
+        position: relative;
+        background: url('../../../assets/purple-bottom.png');
+        background-size: 100px;
+        height: 100px;
+        background-repeat: no-repeat;
+    }
+
+    .main_div {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: url(../../../assets/smile-box.png);
+            bottom: -18%;
+            left: -16%;
+            z-index: 1;
+            transform: scale(.5);
+        }
+    }
+}
+
+.dlt-btn {
+    font-size: 30px;
+    color: #fff;
+}
+
+.color-block {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 5px;
+    border: 1px solid #6e6363;
+}
+
+.color-block.active {
+    box-shadow: 0 0 0 2px inset;
+    border: 1px solid #6e6363;
+}
+
+.color-codes {
+    border: 1px solid #000;
+    background: #000;
+    padding: 30px 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.range-picker_wrap {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    ion-range {
+        background: #000;
+    }
+
+
+}
+
+ion-content {
+    --background: #D2E4FC;
+
+    .range-bg {
+
+
+        img {
+            max-width: 40px;
+            width: 100%;
+        }
+    }
+
+    ion-button {
+        --background: transparent;
+        --color: #000;
+        border: 1px solid #000;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 10px;
+        width: 160px;
+        margin: 20px;
+
+    }
+}
+
+.range-bg {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    img {
+        max-width: 40px;
+        width: 100%;
+    }
+
+    .close {
+        position: absolute;
+        right: 21px;
+        top: 61px;
+        width: 22px;
+        height: 22px;
+    }
+
+    .close:before,
+    .close:after {
+        position: absolute;
+        left: 15px;
+        content: ' ';
+        height: 20px;
+        width: 2px;
+        background-color: #fff;
+    }
+
+    .close:before {
+        transform: rotate(45deg);
+    }
+
+    .close:after {
+        transform: rotate(-45deg);
+    }
+}
+
+ion-range {
+    flex-basis: auto;
+    width: 100%;
+}
+
+.range-wrapper {
+    width: 100%;
+}
+
+.closeColor {
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    top: 0px;
+    right: 15px;
+}
+
+.closeRange {
+    background-color: #000;
+    width: 100%;
+
+    ion-icon {
+        color: #fff;
+        font-size: 30px;
+        float: right;
+        margin-right: 10px;
+    }
+}
+
+svg#Layer_1 {
+    width: 32px;
+    color: #fff;
+    fill: #fff;
+}
+
+.canva-wrap  ion-toolbar:first-of-type {
+    padding: 10px 0;
+}

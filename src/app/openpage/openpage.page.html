@@ -1,0 +1,14 @@
+<ion-header class="header">
+  <ion-toolbar class="ion-safe-area-wrapper">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="padding-left: 40px;" *ngIf="All_data">{{ All_data.title.rendered }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-text *ngIf="All_data" style="user-select: text;">
+    <p [innerHTML]="All_data.content.rendered"></p>
+  </ion-text>
+</ion-content>
